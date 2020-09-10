@@ -28,7 +28,7 @@
             android:layout_alignParentStart="true"
             android:layout_marginStart="24dp"
             android:layout_marginTop="32dp"
-            android:text="@string/you_premium_cloud"
+            android:text="@string/your_premium_cloud"
             android:textColor="#723BFF"
             android:textSize="24sp" />
 

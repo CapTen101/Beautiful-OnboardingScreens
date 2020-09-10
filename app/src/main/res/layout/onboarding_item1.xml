@@ -33,18 +33,114 @@
             android:textColor="#723BFF"
             android:textSize="24sp" />
 
-        <TextView
+        <LinearLayout
             android:id="@+id/main_text"
-            android:layout_width="300dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/hello_text"
-            android:layout_alignParentStart="true"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="10dp"
-            android:text="@string/your_own_private_cloud_is_one_step_away"
-            android:textColor="#100048"
-            android:textSize="36sp"
-            android:textStyle="bold" />
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/your"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Your"
+                    android:textColor="#100048"
+                    android:textSize="36sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/own"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text=" own"
+                    android:textColor="#100048"
+                    android:textSize="36sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/private_cloud_is"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/_private"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:text="private"
+                    android:textColor="#100048"
+                    android:textSize="36sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/cloud"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" cloud"
+                    android:textColor="#100048"
+                    android:textSize="36sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/is"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/is"
+                    android:textColor="#100048"
+                    android:textSize="36sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/one"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:text="one"
+                    android:textColor="#100048"
+                    android:textSize="36sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/step"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" step"
+                    android:textColor="#100048"
+                    android:textSize="36sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/away"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" away"
+                    android:textColor="#100048"
+                    android:textSize="36sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
 
         <TextView
             android:id="@+id/swipe_text"

@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         // setting the animation duration for the Get Started Button (in milliseconds)
-        AnimationDuration = 2500;
+        AnimationDuration = 3500;
 
         mCTAButton = findViewById(R.id.get_started_button);
         mViewPager = findViewById(R.id.onboardingViewPager);
@@ -37,11 +37,16 @@ public class MainActivity extends AppCompatActivity {
         // Animation goes from Alpha 0 to 1 through Fade-In
         mCTAButton.setAlpha(0f);
         mCTAButton.setVisibility(View.VISIBLE);
-        mCTAButton.animate().alpha(1f).setDuration(AnimationDuration).setListener(null);
 
         // Setting the viewPager and viewPager Adapter
         mFragmentPagerAdapter = new MyCustomFragmentPagerAdapter(getSupportFragmentManager(), getLifecycle());
         mViewPager.setAdapter(mFragmentPagerAdapter);
+
+        mCTAButton.animate()
+                .alpha(1f)
+                .setDuration(AnimationDuration)
+                .setStartDelay(1000)
+                .setListener(null);
 
         // Whenever the user tries to scroll the pages, this listener will change the length
         // and color of the PageIndicatorSlider above the page
