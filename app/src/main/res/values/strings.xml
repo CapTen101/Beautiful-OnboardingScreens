@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Onboarding Fold</string>
+    <string name="art_cloud">art_cloud</string>
+    <string name="get_started">Get Started</string>
+    <string name="art_work">art_work</string>
+    <string name="hello">Hello!</string>
+    <string name="your_own_private_cloud_is_one_step_away">Your own private Cloud is one step away.</string>
+    <string name="swipe_left">Swipe left to get started</string>
+    <string name="Launch_campaign">Launch your next campaign within minutes with Cloud Campaign Monitor.</string>
+    <string name="you_premium_cloud">You Premium Cloud</string>
+</resources>

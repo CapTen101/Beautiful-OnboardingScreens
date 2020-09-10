@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/intro_background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/item1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/art_cloud_image"
+            android:layout_width="310dp"
+            android:layout_height="379dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="-46dp"
+            android:layout_marginTop="21dp"
+            android:contentDescription="@string/art_cloud"
+            android:src="@drawable/art_cloud" />
+
+        <TextView
+            android:id="@+id/hello_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/art_cloud_image"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="32dp"
+            android:text="@string/hello"
+            android:textColor="#723BFF"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/main_text"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/hello_text"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/your_own_private_cloud_is_one_step_away"
+            android:textColor="#100048"
+            android:textSize="36sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/swipe_text"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/main_text"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="14dp"
+            android:text="@string/swipe_left"
+            android:textColor="#723BFF"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/art_work_image"
+            android:layout_width="236dp"
+            android:layout_height="225dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="260.93dp"
+            android:layout_marginEnd="-32dp"
+            android:contentDescription="@string/art_work"
+            android:src="@drawable/art_work" />
+
+
+    </RelativeLayout>
+
+</FrameLayout>
