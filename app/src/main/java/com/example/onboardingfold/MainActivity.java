@@ -1,24 +1,26 @@
 package com.example.onboardingfold;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.FragmentActivity;
-import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 import androidx.viewpager2.widget.ViewPager2;
 
 import android.os.Bundle;
 import android.widget.Toast;
 
-import com.example.onboardingfold.fragment.MyCustomFragmentPagerAdapter;
+import com.example.onboardingfold.fragment.adapter.MyCustomFragmentPagerAdapter;
+import com.google.android.material.button.MaterialButton;
 
 public class MainActivity extends AppCompatActivity {
 
     FragmentStateAdapter mFragmentPagerAdapter;
+    MaterialButton mCTAButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        mCTAButton = findViewById(R.id.get_started_button);
 
         ViewPager2 mViewPager = findViewById(R.id.onboardingViewPager);
         mFragmentPagerAdapter = new MyCustomFragmentPagerAdapter(getSupportFragmentManager(), getLifecycle());
@@ -32,10 +34,11 @@ public class MainActivity extends AppCompatActivity {
                 super.onPageScrolled(position, positionOffset, positionOffsetPixels);
             }
 
+            // Do domething here when the user lands at a particular page
             @Override
             public void onPageSelected(int position) {
                 super.onPageSelected(position);
-                Toast.makeText(MainActivity.this, "Selected page position: " + position, Toast.LENGTH_SHORT).show();
+//                Toast.makeText(MainActivity.this, "Selected page position: " + position+1, Toast.LENGTH_SHORT).show();
             }
 
             // Called when the scroll state changes:
