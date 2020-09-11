@@ -35,6 +35,7 @@ public class MainActivityTest {
         fragment = (OnboardingPage1Fragment) OnboardingPage1Fragment.newInstance(1);
     }
 
+    // Create a Mock Object of the Custom FragmentPagerAdapter
     @Mock
     MyCustomFragmentPagerAdapter testAdapter = new MyCustomFragmentPagerAdapter(fragment.getFragmentManager());
 
@@ -60,5 +61,4 @@ public class MainActivityTest {
         onView(withId(R.id.onboardingViewPager)).check(matches(isDisplayed()));
         onView(withId(R.id.tab_layout)).check(matches(isDisplayed()));
     }
-
 }

@@ -8,7 +8,6 @@ import com.example.onboardingfold.R;
 
 public class IntroPageTransformer implements ViewPager.PageTransformer {
 
-    private int id;
     private int border = 0;
     private float speed = 0.8f;
 
