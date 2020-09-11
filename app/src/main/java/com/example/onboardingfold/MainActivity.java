@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
     MaterialButton mCTAButton;
     ViewPager mViewPager;
     PagerTabStrip mPagerTabStrip;
+    TabLayout tabLayout;
 
     // Duration for the Fade-In animation
     private int AnimationDuration;
@@ -33,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
 
         mCTAButton = findViewById(R.id.get_started_button);
         mViewPager = findViewById(R.id.onboardingViewPager);
-        final TabLayout tabLayout = findViewById(R.id.tab_layout);
+        tabLayout = findViewById(R.id.tab_layout);
 
         // Intially all the views are invisible and then they come in through animations
         mCTAButton.setVisibility(View.INVISIBLE);
