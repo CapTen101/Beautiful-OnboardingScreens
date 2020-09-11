@@ -13,7 +13,7 @@ I'll honestly quote that it was definitely a very challenging task :smiley: and 
 
 I have tried to follow a *modular approach* to the task on hand. Every component (`Activity/Fragment/Class`) has it's own package making the code to easier to test and debug in case of bugs and errors.
 
-## Commits Style
+## Commit Style
 
 I've tried to keep commit messages as relevant as possible so as to make it easier for the reader or collaborator to follow-up on the progress of the particular project.
 
@@ -24,6 +24,7 @@ I took *some key decisions* as to how I'll be able to implement the given task a
 - The Adapter for the `ViewPager` was implemented through a custom `FragmentPageAdapter`. It maintains the `Fragment` by-default hence better to use and imeplement.
 - The given custom `Cubic Bezier` animation was implemented through `PathInterpolator`.
 - The Parallax Effect while scrolling the images was implemented through `ViewPager.PageTransformer`.
+- Unit Testing is done through `JUnit4`, `Mockito` and `Espresso`.
 - Variable Length `PageControl` is something which I tried through `ViewPager.PagerTabStrip`.
   - But couldn't achieve it due to less meagre resources available on this. :persevere:
 But it couldn't be left altogether which is essentially not in the spirit of product-based software Engineering :no_mouth:.
