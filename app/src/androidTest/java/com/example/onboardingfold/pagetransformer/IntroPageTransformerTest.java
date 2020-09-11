@@ -1,7 +1,5 @@
 package com.example.onboardingfold.pagetransformer;
 
-import android.widget.ImageView;
-
 import androidx.viewpager.widget.ViewPager;
 
 import com.example.onboardingfold.fragment.OnboardingPage1Fragment;
@@ -19,8 +17,6 @@ public class IntroPageTransformerTest {
     private ViewPager testPager;
     private ViewPager.PageTransformer testPageTransformer;
     private OnboardingPage1Fragment fragment = new OnboardingPage1Fragment();
-    private ImageView testArtWork;
-    private ImageView testArtStairs;
 
     @Mock
     MyCustomFragmentPagerAdapter testAdapter = new MyCustomFragmentPagerAdapter(fragment.getFragmentManager());
