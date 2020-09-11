@@ -10,22 +10,49 @@ public class IntroPageTransformer implements ViewPager.PageTransformer {
 
     private int id;
     private int border = 0;
-    private float speed = 0.2f;
+    private float speed = 0.8f;
 
     @Override
     public void transformPage(View view, float position) {
 
-        View parallaxView = view.findViewById(R.id.art_work_image);
+        // The view which must undergo parallax effect
+        View artWorkParallax = view.findViewById(R.id.art_work_image);
 
-//        if (view == null ) {
-//            Log.w("ParallaxPager", "There is no view");
-//        }
+        // Using ScaleX attribute to shift the view along with the page being scrolled
+        if (artWorkParallax != null) {
 
-        if (parallaxView != null) {
             if (position > -1 && position < 1) {
-                float width = parallaxView.getWidth();
-                parallaxView.setTranslationX((position * width * speed));
-                float sc = ((float)view.getWidth() - border)/ view.getWidth();
+
+                float width = artWorkParallax.getWidth();
+
+                // These expressions initiate the parallax
+                artWorkParallax.setTranslationX((position * width * speed));
+                float sc = ((float) view.getWidth() - border) / view.getWidth();
+
+                if (position == 0) {
+                    view.setScaleX(1);
+                    view.setScaleY(1);
+                } else {
+                    view.setScaleX(sc);
+                    view.setScaleY(sc);
+                }
+            }
+        }
+
+
+        View artStairsParallax = view.findViewById(R.id.art_stairs_image);
+        speed = 0.2f;
+
+        if (artStairsParallax != null) {
+
+            if (position > -1 && position < 1) {
+
+                float width = artStairsParallax.getWidth();
+
+                // These expressions initiate the parallax
+                artStairsParallax.setTranslationX((position * width * speed));
+                float sc = ((float) view.getWidth() - border) / view.getWidth();
+
                 if (position == 0) {
                     view.setScaleX(1);
                     view.setScaleY(1);
