@@ -1,4 +1,12 @@
 apply plugin: 'com.android.application'
+apply plugin: 'jacoco'
+
+jacoco {
+    toolVersion = '0.8.5' //Use latest version
+}
+tasks.withType(Test) {
+    jacoco.includeNoLocationClasses = true
+}
 
 android {
     compileSdkVersion 30
@@ -15,9 +23,19 @@ android {
     }
 
     buildTypes {
+        debug {
+            testCoverageEnabled true
+        }
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    testOptions {
+        execution 'ANDROID_TEST_ORCHESTRATOR'
+        animationsDisabled true
+        unitTests {
+            includeAndroidResources = true
         }
     }
 }
