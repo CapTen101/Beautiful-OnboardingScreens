@@ -27,14 +27,14 @@ public class IntroPageTransformer implements ViewPager.PageTransformer {
 
                 // These expressions initiate the parallax
                 artWorkParallax.setTranslationX((position * width * speed));
-                float sc = ((float) view.getWidth() - border) / view.getWidth();
+                float scale = ((float) view.getWidth() - border) / view.getWidth();
 
                 if (position == 0) {
                     view.setScaleX(1);
                     view.setScaleY(1);
                 } else {
-                    view.setScaleX(sc);
-                    view.setScaleY(sc);
+                    view.setScaleX(scale);
+                    view.setScaleY(scale);
                 }
             }
         }
@@ -51,14 +51,14 @@ public class IntroPageTransformer implements ViewPager.PageTransformer {
 
                 // These expressions initiate the parallax
                 artStairsParallax.setTranslationX((position * width * speed));
-                float sc = ((float) view.getWidth() - border) / view.getWidth();
+                float scale = ((float) view.getWidth() - border) / view.getWidth();
 
                 if (position == 0) {
                     view.setScaleX(1);
                     view.setScaleY(1);
                 } else {
-                    view.setScaleX(sc);
-                    view.setScaleY(sc);
+                    view.setScaleX(scale);
+                    view.setScaleY(scale);
                 }
             }
         }
