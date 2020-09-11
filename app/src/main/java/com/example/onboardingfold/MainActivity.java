@@ -5,7 +5,6 @@ import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentPagerAdapter;
-import androidx.viewpager.widget.PagerTabStrip;
 import androidx.viewpager.widget.ViewPager;
 
 import com.example.onboardingfold.fragment.adapter.MyCustomFragmentPagerAdapter;
@@ -18,7 +17,6 @@ public class MainActivity extends AppCompatActivity {
     FragmentPagerAdapter mFragmentPagerAdapter;
     MaterialButton mCTAButton;
     ViewPager mViewPager;
-    PagerTabStrip mPagerTabStrip;
     TabLayout tabLayout;
 
     // Duration for the Fade-In animation
