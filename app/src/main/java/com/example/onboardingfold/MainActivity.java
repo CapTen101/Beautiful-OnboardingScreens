@@ -50,6 +50,9 @@ public class MainActivity extends AppCompatActivity {
         mFragmentPagerAdapter = new MyCustomFragmentPagerAdapter(getSupportFragmentManager());
         mViewPager.setAdapter(mFragmentPagerAdapter);
 
+//        InkPageIndicator inkPageIndicator = (InkPageIndicator) findViewById(R.id.indicator);
+//        inkPageIndicator.setViewPager(mViewPager);
+
         // Set a PageTransformer
         mViewPager.setPageTransformer(false, new IntroPageTransformer());
 

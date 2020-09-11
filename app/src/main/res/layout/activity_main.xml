@@ -9,15 +9,14 @@
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/onboardingViewPager"
         android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
         android:layout_height="match_parent">
 
         <androidx.viewpager.widget.PagerTabStrip
             android:id="@+id/pager_strip"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:scrollbarStyle="insideInset"
-            style="@style/ShapeAppearance.MaterialComponents.Tooltip"
-            android:layout_gravity="top"/>
+            android:layout_width="106dp"
+            android:layout_height="8dp"
+            android:layout_gravity="center_horizontal" />
 
     </androidx.viewpager.widget.ViewPager>
 
