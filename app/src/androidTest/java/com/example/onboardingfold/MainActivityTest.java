@@ -4,6 +4,7 @@ import androidx.test.core.app.ActivityScenario;
 import androidx.test.internal.runner.junit4.AndroidJUnit4ClassRunner;
 import androidx.viewpager.widget.ViewPager;
 
+import com.example.onboardingfold.fragment.OnboardingPage1Fragment;
 import com.example.onboardingfold.fragment.adapter.MyCustomFragmentPagerAdapter;
 
 import org.junit.Before;
@@ -16,7 +17,7 @@ import static androidx.test.espresso.Espresso.onView;
 import static androidx.test.espresso.assertion.ViewAssertions.matches;
 import static androidx.test.espresso.matcher.ViewMatchers.isDisplayed;
 import static androidx.test.espresso.matcher.ViewMatchers.withId;
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertSame;
 
@@ -25,16 +26,17 @@ public class MainActivityTest {
 
     ActivityScenario activityScenario;
     private ViewPager testPager;
+    private OnboardingPage1Fragment fragment = new OnboardingPage1Fragment();
 
     // Intiate the viewPager and PagerAdapter
     @Before
     public void init_ViewPager() {
         testPager = new ViewPager(getContext());
-
+        fragment = (OnboardingPage1Fragment) OnboardingPage1Fragment.newInstance(1);
     }
 
     @Mock
-    MyCustomFragmentPagerAdapter testAdapter;
+    MyCustomFragmentPagerAdapter testAdapter = new MyCustomFragmentPagerAdapter(fragment.getFragmentManager());
 
     // Check for proper instantiation of the viewPager PagerAdapter
     @Test
@@ -45,12 +47,10 @@ public class MainActivityTest {
         assertSame(testAdapter, testPager.getAdapter());
     }
 
+    // Testing for Adapter NOT_NULL
     @Test
-    public void test_AdapterViewCount() {
-        assertNull(testAdapter);
-
-        testAdapter = (MyCustomFragmentPagerAdapter) testPager.getAdapter();
-        assertEquals(2, testAdapter.getItem(2));
+    public void test_AdapterNotNull() {
+        assertNotNull(testAdapter);
     }
 
     // Testing for TabLayout and ViewPager being displayed
