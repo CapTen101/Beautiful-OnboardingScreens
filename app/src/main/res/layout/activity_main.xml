@@ -4,22 +4,36 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:isScrollContainer="true"
     tools:context=".MainActivity">
+
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/onboardingViewPager"
         android:layout_width="match_parent"
-        android:layout_marginTop="10dp"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp">
 
-        <androidx.viewpager.widget.PagerTabStrip
-            android:id="@+id/pager_strip"
+        <!--        <androidx.viewpager.widget.PagerTabStrip-->
+        <!--            android:id="@+id/pager_strip"-->
+        <!--            android:layout_width="106dp"-->
+        <!--            android:layout_height="8dp"-->
+        <!--            android:layout_gravity="center_horizontal" />-->
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tab_layout"
             android:layout_width="106dp"
             android:layout_height="8dp"
-            android:layout_gravity="center_horizontal" />
+            android:layout_centerInParent="true"
+            android:foregroundGravity="center_horizontal"
+            android:textAlignment="center"
+            app:tabGravity="center"
+            app:tabIndicator="@drawable/page_control_indicator_item_active"
+            app:tabIndicatorGravity="center"
+            app:tabMode="scrollable" />
+
 
     </androidx.viewpager.widget.ViewPager>
-
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/get_started_button"

@@ -36,4 +36,10 @@ public class MyCustomFragmentPagerAdapter extends FragmentPagerAdapter {
     public int getCount() {
         return NUM_PAGES;
     }
+
+    // returns the width of the page
+    @Override
+    public float getPageWidth(int position) {
+        return super.getPageWidth(position);
+    }
 }
