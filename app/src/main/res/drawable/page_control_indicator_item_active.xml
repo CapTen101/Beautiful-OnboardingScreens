@@ -3,7 +3,7 @@
     android:dither="true"
     android:shape="rectangle">
     <size
-        android:width="106dp"
+        android:width="206dp"
         android:height="8dp" />
 
     <corners android:radius="25dp" />

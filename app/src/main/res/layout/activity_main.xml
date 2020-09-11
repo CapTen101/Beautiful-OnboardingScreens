@@ -22,15 +22,14 @@
 
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tab_layout"
-            android:layout_width="106dp"
+            android:layout_width="wrap_content"
             android:layout_height="8dp"
             android:layout_centerInParent="true"
             android:foregroundGravity="center_horizontal"
-            android:textAlignment="center"
             app:tabGravity="center"
+            app:tabMode="scrollable"
             app:tabIndicator="@drawable/page_control_indicator_item_active"
-            app:tabIndicatorGravity="center"
-            app:tabMode="scrollable" />
+            app:tabIndicatorGravity="center"/>
 
 
     </androidx.viewpager.widget.ViewPager>
