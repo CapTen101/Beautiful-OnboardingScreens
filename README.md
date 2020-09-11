@@ -21,17 +21,17 @@ I've tried to keep commit messages as relevant as possible so as to make it easi
 
 I took *some key decisions* as to how I'll be able to implement the given task at hand: 
 - Swipable Layout is created through `androidx.ViewPager`.
-- The Adapter for the `ViewPager` was implemented through a custom `FragmentPageAdapter`. It maintains the `Fragment` by-default hence better to use and imeplement.
+- The Adapter for the `ViewPager` was implemented through a custom `FragmentPageAdapter`. It maintains the `Fragment` life-cycle by-default hence favourable to use and implement.
 - The given custom `Cubic Bezier` animation was implemented through `PathInterpolator`.
 - The Parallax Effect while scrolling the images was implemented through `ViewPager.PageTransformer`.
 - Unit Testing is done through `JUnit4`, `Mockito` and `Espresso`.
 - Variable Length `PageControl` is something which I tried through `ViewPager.PagerTabStrip`.
-  - But couldn't achieve it due to less meagre resources available on this. :persevere:
-But it couldn't be left altogether which is essentially not in the spirit of product-based software Engineering :no_mouth:.
-  - I tried to implement atleast a very basic `TabLayout` to fulfill our need of a Slider or PageControl kind of layout to enhance the UI/UX and detect the sliding views of the OnBoarding `ViewPager`.
+  - But couldn't achieve it due to very less resources available on this. :persevere:
+But it couldn't be left altogether which is essentially not in the spirit of software Engineering :no_mouth:.
+  - I tried to implement atleast a very basic `TabLayout` to fulfill our need of a Slider or PageControl kind of layout to maintain the UI/UX and detect the sliding views of the OnBoarding `ViewPager`.
 - The second task I couldn't implement was the animation of words being starting only after the previous word. I certainly could implement the `PathInterpolator` for the `Cubic Bezier` style of animation.
   - But the problem lied in the delaying of the animations. Somehow the `setStartDelay` method of the `.animate()` or even the `setStartOffSet()` of `Animation` class weren't behaving properly inside the fragment as they should. :confused:
-  - I tried to block the animation of the next through running each animation on the UIThread (since it's synchronous and blocks the rest of the services before it completes itself) but to no avail.
+  - I tried to block the animation of the next word through running each animation on the UIThread (since it's synchronous and blocks the rest of the services before it completes itself), but to no avail.
   - Again there weren't many resources addressing this problem so I thought atleast I can equate the timing of the animations to suffice the initial development.
 - I feel that a little external help could have led me to implement these but I refrained myself from asking anybody and decided to complete this all my myself. A great way to learn :grin:.
 
