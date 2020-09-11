@@ -13,9 +13,9 @@ I'll honestly quote that it was definitely a very challenging task :smiley: and 
 
 I have tried to follow a *modular approach* to the task on hand. Every component (`Activity/Fragment/Class`) has it's own package making the code to easier to test and debug in case of bugs and errors.
 
-## Commit Style
+## Commit & Comments
 
-I've tried to keep commit messages as relevant as possible so as to make it easier for the reader or collaborator to follow-up on the progress of the particular project.
+I've tried to keep commit messages as relevant as possible so as to make it easier for the reader or collaborator to follow-up on the progress of the particular project. Also, the code is well commented across the project to further simplify the code understanding for any person getting introduced to the project.
 
 ## My Decisions and Implementation Details
 
