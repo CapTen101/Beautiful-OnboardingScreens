@@ -7,6 +7,8 @@ I'll honestly quote that it was definitely a very challenging task :smiley: and 
 
 ## My Implementation:
 
+Watch the video here:
+
 [![Watch the video here](https://github.com/CapTen101/Android-Task-DevFolio/raw/master/PosterFinal.png)](https://drive.google.com/file/d/1Qa9UrtOg1x-f6nnO7Dx-zeonXq6T2X9B/view?usp=sharing)
 
 ## Software Architecture
